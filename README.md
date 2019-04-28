@@ -25,7 +25,6 @@ Things you may want to cover:
 
 
 >## usersテーブル
->---
 
 |Column|Type|Options|
 |------|----|-------|
@@ -40,7 +39,6 @@ Things you may want to cover:
 <br />
 
 >## commentsテーブル
->---
 
 |Column|Type|Options|
 |------|----|-------|
@@ -55,7 +53,6 @@ Things you may want to cover:
 <br />
 
 >## groupsテーブル
->---
 
 |Column|Type|Options|
 |------|----|-------|
@@ -68,7 +65,6 @@ Things you may want to cover:
 <br />
 
 >## membersテーブル
->---
 
 |Column|Type|Options|
 |------|----|-------|
