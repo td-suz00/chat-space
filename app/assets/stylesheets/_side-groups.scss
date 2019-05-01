@@ -1,0 +1,17 @@
+.side-groups{
+  background-color: #2f3e51;
+  @include width_height(calc(100% - 40px), calc(100% - 100px));
+  padding: 0 20px;
+
+    &__group{
+      padding: 20px 0;
+
+      &__name{
+        margin-bottom: 5px;
+        font-size: 15px;
+      }
+      &__latest-message{
+        font-size: 11px;
+      }
+    }
+  }

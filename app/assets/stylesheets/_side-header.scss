@@ -1,0 +1,36 @@
+.side-header{
+  background-color: #253141;
+  width: calc(100% - 40px);
+  height: 100px;
+  padding: 0 20px;
+
+  &__user-name{
+    float: left;
+    line-height: 100px;
+    font-size: 16px;
+  }
+  &__user-menu{
+    float: right;
+    line-height: 100px;
+    display: inline-block;
+    
+    &__edit-user{
+      float: right;
+      line-height: 100px;
+      margin-left: 10px;
+
+      .edit-user-btn{
+        color: white;
+      }
+    }
+
+    &__new-group{
+      float: right;
+      line-height: 100px;
+
+      .create-new-group-btn{
+        color: white;
+      }
+    }
+  }
+}

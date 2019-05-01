@@ -1,0 +1,40 @@
+.main-header{
+  height: 100px;
+  padding: 0 40px;
+  border-bottom: solid 1px #eeeeee;
+
+  &__current-group{
+    float: left;
+
+    &__name{
+      padding: 35px 0 0 0;
+      @include fontsize_color(20px, #333333);
+    }
+    &__members-list{
+      padding: 15px 0 0 0;
+      @include fontsize_color(12px, $sub-text-color);
+      
+      p{
+        float: left;
+        margin-right: 10px;
+      }
+      &__member{
+        float: left;
+      }
+    }
+  }
+
+  &__edit-group{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    margin-top: 28px;
+    padding: 0 20px;
+    border: solid 1px $background-color;
+    
+    .group-edit-btn{
+      color: $background-color;
+      text-decoration:none;
+    }
+  }
+}

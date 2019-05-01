@@ -1,0 +1,7 @@
+.header{
+  background-color: $background-color;
+  color: white;
+  @include width_height(100vw, 30px);
+  text-align: center;
+  line-height: 30px;
+}

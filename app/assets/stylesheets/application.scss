@@ -1,0 +1,20 @@
+@import "font-awesome";
+@import "./reset";
+@import "./variable";
+@import "./width_height";
+@import "./fontsize_color";
+
+
+html,body{
+  @include width_height(100vw, 100vh);
+  margin: 0;
+  padding: 0;
+
+  @import "./header";
+  @import "./sub_window";
+  @import "./main_window";
+}
+
+
+
+
