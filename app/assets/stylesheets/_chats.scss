@@ -1,0 +1,29 @@
+.chats{
+  background-color: #fafafa;
+  height: calc(100% - 246px);
+  padding: 46px 40px 0;
+
+  &__chat{
+    margin-bottom: 40px;
+
+    &__upper-info{
+      
+      &__user-name{
+        float: left;
+        @include fontsize_color(16px, $text-color);
+        font-weight: bold;
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      &__date{
+        float: left;
+        @include fontsize_color(12px, $sub-text-color);
+      }
+    }
+
+    &__message{
+      @include fontsize_color(14px, #434a54);
+      clear: both;
+    }
+  }
+}

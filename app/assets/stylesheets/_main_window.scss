@@ -1,0 +1,8 @@
+.main_window{
+  @include width_height(calc(100vw - 300px), 100%);
+  float: right;
+
+  @import "./main-header";
+  @import "./chats";
+  @import "./form";
+}

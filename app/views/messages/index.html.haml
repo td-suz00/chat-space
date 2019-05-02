@@ -1,0 +1,46 @@
+.header
+  %p グループを作成しました
+
+.sub_window
+  .side-header
+    %p.side-header__user-name test-user
+    %ul.side-header__user-menu
+      .side-header__user-menu__edit-user
+        = link_to root_path, class: "edit-user-btn" do
+          %i.fa.fa-cog
+      .side-header__user-menu__new-group
+        = link_to root_path, class: "create-new-group-btn" do
+          %i.fa.fa-edit
+  .side-groups
+    =render partial: "messages/side-groups__group"
+    =render partial: "messages/side-groups__group"
+    =render partial: "messages/side-groups__group"
+
+.main_window
+  .main-header
+    .main-header__current-group
+      %p.main-header__current-group__name test-group
+      %ul.main-header__current-group__members-list
+        %p Member :
+        %li.main-header__current-group__members-list__member dice
+
+    .main-header__edit-group
+      =link_to root_path, class: "group-edit-btn" do
+        %p Edit
+
+  .chats
+    =render partial: "messages/chats__chat"
+    =render partial: "messages/chats__chat"
+    =render partial: "messages/chats__chat"
+
+  .form
+    .form__new-message
+      .form__new-message__input-box
+        %p.form__new-message__input-box__text type a message
+        %label.form__new-message__input-box__img{for: "tweet-img"}
+          %i.fa.fa-image 
+            = file_field_tag :image, id: "tweet-img"
+
+      .form__new-message__submit-btn
+        =link_to root_path, class: "new-message-btn" do
+          %p Send
