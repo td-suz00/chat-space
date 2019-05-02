@@ -11,8 +11,6 @@
       &__user-name{
         float: left;
         @include fontsize_color(16px, $text-color);
-        // font-size: 16px;
-        // color: $text-color;
         font-weight: bold;
         margin-right: 10px;
         margin-bottom: 10px;
@@ -20,15 +18,11 @@
       &__date{
         float: left;
         @include fontsize_color(12px, $sub-text-color);
-        // font-size: 12px;
-        // color: $sub-text-color;
       }
     }
 
     &__message{
       @include fontsize_color(14px, #434a54);
-      // font-size: 14px;
-      // color: #434a54;
       clear: both;
     }
   }
