@@ -3,7 +3,9 @@
 @import "./variable";
 @import "./width_height";
 @import "./fontsize_color";
-
+@import "./user";
+@import "./flash";
+@import "./group";
 
 html,body{
   @include width_height(100vw, 100vh);

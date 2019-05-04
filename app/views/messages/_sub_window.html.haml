@@ -1,0 +1,20 @@
+.sub_window
+  .side-header
+    %p.side-header__user-name 
+      = current_user.name
+    %ul.side-header__user-menu
+      .side-header__user-menu__edit-user
+        = link_to edit_user_path(current_user), class: "edit-user-btn" do
+          %i.fa.fa-cog
+      .side-header__user-menu__new-group
+        = link_to new_group_path, class: "create-new-group-btn" do
+          %i.fa.fa-edit
+
+  .side-groups
+    - current_user.groups.each do |group|
+      .side-groups__group
+        = link_to groups_path(group),style: "color:white; text-decoration:none;" do
+          .side-groups__group__name
+            = group.name
+          .side-groups__group__latest-message
+            メッセージはまだありません。 

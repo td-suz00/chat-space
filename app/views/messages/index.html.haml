@@ -1,21 +1,5 @@
-.header
-  %p グループを作成しました
-
-.sub_window
-  .side-header
-    %p.side-header__user-name test-user
-    %ul.side-header__user-menu
-      .side-header__user-menu__edit-user
-        = link_to root_path, class: "edit-user-btn" do
-          %i.fa.fa-cog
-      .side-header__user-menu__new-group
-        = link_to root_path, class: "create-new-group-btn" do
-          %i.fa.fa-edit
-  .side-groups
-    =render partial: "messages/side-groups__group"
-    =render partial: "messages/side-groups__group"
-    =render partial: "messages/side-groups__group"
-
+=render partial: "messages/sub_window"
+    
 .main_window
   .main-header
     .main-header__current-group
@@ -25,8 +9,7 @@
         %li.main-header__current-group__members-list__member dice
 
     .main-header__edit-group
-      =link_to root_path, class: "group-edit-btn" do
-        %p Edit
+      =link_to "Edit", root_path, class: "group-edit-btn" 
 
   .chats
     =render partial: "messages/chats__chat"
