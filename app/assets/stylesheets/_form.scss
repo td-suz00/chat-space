@@ -16,15 +16,17 @@
     
     &__input-box{
       background-color: white;
-      height: 50px;
-      width: calc(90% - 15px);
+      @include width_height(calc(90% - 15px), 50px);
       line-height: 50px;
       float: left;
       margin-right: 15px;
       
       &__text{
         float: left;
+        @include width_height(calc(90% - 15px), 48px);
         @include fontsize_color(16px, $text-color);
+        // opacity: 0.5;
+        border: none;
         padding-left: 10px;
       }
       &__img{

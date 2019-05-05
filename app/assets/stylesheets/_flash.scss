@@ -1,6 +1,10 @@
 .flash {
   color: white;
   text-align: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
   &__alert{
     background-color: red;
   }

@@ -17,4 +17,5 @@
           .side-groups__group__name
             = group.name
           .side-groups__group__latest-message
-            メッセージはまだありません。 
+            -# groupモデルのインスタンスメソッドの呼び出し
+            = group.show_lase_message
