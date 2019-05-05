@@ -1,5 +1,11 @@
 .chats__chat
   .chats__chat__upper-info
-    %p.chats__chat__upper-info__user-name test-user
-    %p.chats__chat__upper-info__date 2019/05/01/(Wed) 00:00:00
-  %p.chats__chat__message ようこそ令和
+    .chats__chat__upper-info__user-name
+      = message.user.name
+    .chats__chat__upper-info__date
+      = message.created_at.strftime("%Y/%m/%d %H:%M")
+  .chats__chat__message
+    .chats__chat__message__text
+      = message.text
+    .chats__chat__message__image
+      = image_tag message.image.url if message.image.present?

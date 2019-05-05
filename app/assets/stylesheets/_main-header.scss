@@ -1,7 +1,9 @@
 .main-header{
-  height: 100px;
+  @include width_height(calc(100% - 380px), 100px);
+  background-color: white;
   padding: 0 40px;
   border-bottom: solid 1px #eeeeee;
+  position: fixed;
 
   &__current-group{
     float: left;

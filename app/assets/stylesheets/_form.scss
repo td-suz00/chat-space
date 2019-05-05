@@ -1,8 +1,10 @@
 .form{
   background-color: silver;
-  height: 100px;
+  @include width_height(calc(100% - 380px), 100px);
   padding: 0 40px;
   position: relative;
+  position: fixed;
+  bottom: 0;
 
   &__new-message{
     position: absolute;
