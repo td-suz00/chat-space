@@ -18,12 +18,11 @@
 
   .form
     .form__new-message
-      .form__new-message__input-box
-        %p.form__new-message__input-box__text type a message
-        %label.form__new-message__input-box__img{for: "tweet-img"}
-          %i.fa.fa-image 
-            = file_field_tag :image, id: "tweet-img"
-
-      .form__new-message__submit-btn
-        =link_to root_path, class: "new-message-btn" do
-          %p Send
+      = form_for [@group, @message] do |f|
+        .form__new-message__input-box
+          = f.text_field :text, class: "form__new-message__input-box__text", placeholder: "type a message"
+          = f.label :image, class: "form__new-message__input-box__img" do
+            = fa_icon "picture-o", class: "icon"
+            = f.file_field :image, class: "tweet-img"
+        = f.submit "Send", class: "form__new-message__submit-btn"
+        
