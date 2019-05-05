@@ -2,6 +2,8 @@
   background-color: #fafafa;
   height: calc(100% - 246px);
   padding: 46px 40px 0;
+  margin: 100px 0;
+  overflow: scroll;
 
   &__chat{
     margin-bottom: 40px;
@@ -24,6 +26,9 @@
     &__message{
       @include fontsize_color(14px, #434a54);
       clear: both;
+      // &__image{
+      //   @include width_height(100px, 100px);
+      // }
     }
   }
 }
