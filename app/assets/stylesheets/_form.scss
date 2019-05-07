@@ -20,10 +20,11 @@
       line-height: 50px;
       float: left;
       margin-right: 15px;
+      position: relative;
       
       &__text{
         float: left;
-        @include width_height(calc(90% - 15px), 48px);
+        @include width_height(99%, 48px);
         @include fontsize_color(16px, $text-color);
         // opacity: 0.5;
         border: none;
@@ -33,6 +34,9 @@
         float: right;
         padding-right: 10px;
         line-height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
 
         .tweet-img{
           color: black;
