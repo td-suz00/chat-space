@@ -26,9 +26,6 @@
     &__message{
       @include fontsize_color(14px, #434a54);
       clear: both;
-      // &__image{
-      //   @include width_height(100px, 100px);
-      // }
     }
   }
 }

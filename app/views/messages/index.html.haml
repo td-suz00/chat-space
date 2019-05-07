@@ -1,29 +1,4 @@
 =render partial: "messages/sub_window"
     
-.main_window
-  .main-header
-    .main-header__current-group
-      %p.main-header__current-group__name 
-        = @group.name
-      %ul.main-header__current-group__members-list
-        %p Member :
-        %li.main-header__current-group__members-list__member
-          - @group.users.each do |member|
-            = member.name
-
-    .main-header__edit-group
-      =link_to "Edit", edit_group_path(@group), class: "group-edit-btn" 
-
-  .chats
-    = render partial: "messages/chats__chat", collection: @messages, as: "message"
-
-  .form
-    .form__new-message
-      = form_for [@group, @message] do |f|
-        .form__new-message__input-box
-          = f.text_field :text, class: "form__new-message__input-box__text", placeholder: "type a message"
-          = f.label :image, class: "form__new-message__input-box__img" do
-            = fa_icon "picture-o", class: "icon"
-            = f.file_field :image, class: "tweet-img"
-        = f.submit "Send", class: "form__new-message__submit-btn"
+=render partial: "messages/main_window"
         

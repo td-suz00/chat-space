@@ -1,0 +1,22 @@
+@import "font-awesome";
+@import "./option/reset";
+@import "./option/variable";
+@import "./option/width_height";
+@import "./option/fontsize_color";
+@import "./option/user";
+@import "./option/flash";
+@import "./option/group";
+
+html,body{
+  @include width_height(100vw, 100vh);
+  margin: 0;
+  padding: 0;
+
+  @import "./application/header";
+  @import "./application/sub_window";
+  @import "./application/main_window";
+}
+
+
+
+

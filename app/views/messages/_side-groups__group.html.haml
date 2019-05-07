@@ -1,0 +1,7 @@
+.side-groups__group
+  = link_to group_messages_path(group),style: "color:white; text-decoration:none;" do
+    .side-groups__group__name
+      = group.name
+    .side-groups__group__latest-message
+      -# groupモデルのインスタンスメソッドの呼び出し
+      = group.show_latest_message

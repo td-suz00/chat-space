@@ -4,6 +4,6 @@
   @include width_height(300px, 100%);
   float: left;
 
-  @import "./side-header";
-  @import "./side-groups";
+  @import "./sub_window/side-header";
+  @import "./sub_window/side-groups";
 }
