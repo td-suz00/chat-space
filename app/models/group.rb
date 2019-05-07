@@ -5,7 +5,7 @@ class Group < ApplicationRecord
 
   validates :name, presence: true
 
-  def show_lase_message
+  def show_latest_message
     # 最後のメッセージをlase_message変数に入れつつ、あるかどうかを判定
     if (last_message = messages.last).present?
       # 三項演算子　条件式 ? trueの時の値 : falseの時の値

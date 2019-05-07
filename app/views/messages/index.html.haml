@@ -3,13 +3,16 @@
 .main_window
   .main-header
     .main-header__current-group
-      %p.main-header__current-group__name test-group
+      %p.main-header__current-group__name 
+        = @group.name
       %ul.main-header__current-group__members-list
         %p Member :
-        %li.main-header__current-group__members-list__member dice
+        %li.main-header__current-group__members-list__member
+          - @group.users.each do |member|
+            = member.name
 
     .main-header__edit-group
-      =link_to "Edit", root_path, class: "group-edit-btn" 
+      =link_to "Edit", edit_group_path(@group), class: "group-edit-btn" 
 
   .chats
     = render partial: "messages/chats__chat", collection: @messages, as: "message"

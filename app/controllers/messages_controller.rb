@@ -4,8 +4,8 @@ class MessagesController < ApplicationController
   def index
     # メッセージモデルの新しいインスタンスを生成
     @message = Message.new
-    # グループに所属する全てのメッセージを定義
-    @messages = @group.messages.includes(:user)
+    # グループに所属する全てのメッセージの情報のハッシュを配列に
+    @messages = @group.messages.includes(:user).order("created_at DESC")
   end
 
   def create
