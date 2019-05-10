@@ -11,7 +11,7 @@ class MessagesController < ApplicationController
   def create
     # 現在のグループ、今入力されたメッセージのインスタンスを生成
     @message = @group.messages.new(message_params)
-    @messages = Message.all
+    @messages = @group.messages.all
 
     if @message.save
       # リクエストされたフォーマットによって処理をかえる
