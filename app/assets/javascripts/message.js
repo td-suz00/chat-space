@@ -55,8 +55,7 @@ $(function(){
       // 投稿メッセージまでスクロール
       $('.chats').animate({scrollTop: $('.chats')[0].scrollHeight}, 'fast');
       // テキストボックスを空に
-      $('.form__new-message__input-box__text').val('')
-      $('.tweet-img').val('')
+      $('form')[0].reset()
     })
 
     .fail(function(){
