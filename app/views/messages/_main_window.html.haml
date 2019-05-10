@@ -17,7 +17,7 @@
 
   .form
     .form__new-message
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html: { class: "create_message" } do |f|
         .form__new-message__input-box
           = f.text_field :text, class: "form__new-message__input-box__text", placeholder: "type a message"
           = f.label :image, class: "form__new-message__input-box__img" do
