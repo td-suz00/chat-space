@@ -1,7 +1,7 @@
 .chat-group-form
   %h1 新規チャットグループ
 
-  = render partial: "groups/form", locals: { group: @group }
+  = render partial: "groups/form", locals: { group: @group, group_users: @group.users }
 
 
 
