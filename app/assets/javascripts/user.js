@@ -56,13 +56,16 @@ $(function(){
   // 追加をクリックしたら発火
   $(document).on("click", ".chat-group-user__btn--add", function(){
 
-    // 追加したuserの名前を消す
-    $(".chat-group-user.clearfix")[0].remove();
-    // 追加したらフォームの中を空にする
-    $('#user-search-field').val("")
+    
+    
 
     // $new_memberにクリックした場所のオブジェクトを代入
     var new_member = $(this);
+    // 追加したuserの名前を消す
+    $(new_member.parent()).remove();
+    // 追加したらフォームの中を空にする
+    $('form')[0].reset();
+
     var add_user_html = add_user_HTML(new_member);
     $('#chat-group-users').append(add_user_html)
   })
