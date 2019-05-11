@@ -11,7 +11,6 @@ $(function(){
   // 検索フォームに文字が入力されるたびに発火
   $("#user-search-field").on("keyup", function(){
     var input = $("#user-search-field").val();
-    console.log(input);
 
     // 入力された情報をコントローラへ
     $.ajax({
