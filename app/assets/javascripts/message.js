@@ -2,7 +2,7 @@ $(function(){
   function buildHTML(message){
     image = ( message.image ) ? `<image src=${message.image}>` : " " ;
 
-    var html =  `<div class = chats__chat  data-id = ${message.id}>
+    var html =  `<div class = chats__chat  data-messageID = ${message.id}>
 
                   <div class = chats__chat__upper-info>
                     <div class = chats__chat__upper-info__user-name>
